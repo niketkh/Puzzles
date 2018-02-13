@@ -82,7 +82,7 @@ Puzzles
 		-> http://rec.puzzles.narkive.com/wZAQbX9p/button-trap-room
 
 
--> Poisoned Wine, 1000 Bottles, 10 Prisoners
+-> Poisoned Wine, 1000 Bottles, 10 Prisoners Puzzle
 	-> Puzzle:
 		->  The King of a small country invites 1000 senators to his annual party. As a tradition, each senator brings the King a bottle of a wine. Soon after, the Queen discovers that one of the senators is trying to assassinate the King by giving him a bottle of poisoned wine. Unfortunately, they do not know which senator, nor which bottle of wine is poisoned, and the poison is completely indiscernible. However, the King has 10 prisoners he plans to execute. He decides to use them as taste testers to determine which bottle of wine contains the poison. The poison when taken has no effect on the prisoner until exactly 24 hours later when the infected prisoner dies. The King needs to determine which bottle of wine is poisoned by tomorrow so that festivities can continue as planned. Hence he only has time for one round of testing. How can the King administer the wine to the prisoners to ensure that 24 hours from now he is guaranteed to have found the poisoned bottle of wine?
 	-> Solution:
@@ -94,7 +94,7 @@ Puzzles
 	-> Reference:
 		-> https://medium.com/i-math/a-king-1000-bottles-of-wine-10-prisoners-and-a-drop-of-poison-2dd1959a8dd2
 
--> Poisoned Wine, 240 Barrels, 5 Slaves
+-> Poisoned Wine, 240 Barrels, 5 Slaves Puzzle
 	-> Puzzle:	
 		-> You have 240 barres of wine, one of which has been poisoned. After drinking the poisoned wine, one dies within 24 hours. You have 5 slaves whom you are willing to sacrifice in order to determine which barrel contains the poisoned wine. How do you achieve this in 48 hours?
 	-> Solution:

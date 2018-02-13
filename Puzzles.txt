@@ -107,3 +107,26 @@ Puzzles
 	-> Reference:
 		-> https://www.geeksforgeeks.org/puzzle-5-finding-the-poisoned-wine/
 
+-> 100 floors, 2 eggs Puzzle
+	-> Puzzle:
+		-> Suppose that we wish to know which stories in a 100 story building are safe to drop eggs from, and which will cause the eggs to break on landing. What strategy should be used to drop eggs such that total number od drops in a worst case is minimized and we find the required floor
+	-> Assumptions:
+		-> An egg that survives a fall can be used again
+		-> A broken egg must be discarded
+		-> The effect of all is same for all eggs
+		-> If an egg breaks when dropped, then it would break if dropped from a higher floor
+		-> If an egg survives a fall then it would survive a shorter fall
+	-> Solution:
+		-> If there is only one egg available and we wish to be sure of obtaining the right result, the experiment can be carried out in only one way. Drop the egg from first floor, if it survives drop it from second floor and continue until it breaks. In the worst case, this method may require 100 droppings.
+		-> Now for our case. If we use Binary search method to find floor and we start from 50th floor, then we end up doing 50 comparisons in worst case.
+		-> Optimised method:
+			Let us make our first attempt on xth floor. If it breaks, we try remaining (x-1) floors one by one. So in worst case we make x trials.
+				x + (x-1) + (x-2) + ... + 1 = 100
+				x(x+1)/2 = 100
+
+				x = 13.651
+
+		-> Therefor we start from 14th floor. If egg breaks we one by one try remaining 13 floors. If egg doesn't break we go to 27th floor and so on.
+
+	-> Reference:
+		-> https://www.geeksforgeeks.org/puzzle-set-35-2-eggs-and-100-floors/

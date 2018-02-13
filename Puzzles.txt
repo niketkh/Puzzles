@@ -1,0 +1,109 @@
+Puzzles
+=======
+
+-> 5 Pirates and 100 Gold Coins Puzzle
+	-> Puzzle: 
+		-> There are 5 pirates, they must decide how to distribute 100 gold coins among them. The pirates have seniority levels, the senior-most is A, then B, then C, then D, and finally the junior most is E. What is the maximum number of coins that pirate A might get ?
+	-> Rules of distribution:
+		-> The most senior pirate proposes a distribution of coins
+		-> All pirates vote on whether to accept the distribution
+		-> If the distribution is accepted, the coins are disbursed and the game ends
+		-> If not, the proposer is thrown and dies, and the next most senior pirate make a new proposal to begin system again
+		-> In case of a tie vote the proposer has the casting vote i.e in case of 4 pirate even if its 2 - 2 proposal is accepted
+	-> Rules every pirate follows:
+		-> Every pirate wants to survive
+		-> Given survival, each pirate wants to maximize the number of gold coins he receives
+	-> Solution:
+		A 	B 	C 	D 	E 	
+						100
+					100 0
+				99 	0 	1
+			99 	0 	1 	0
+		98 	0 	1 	0 	1
+
+	-> Reference: 
+		-> https://www.geeksforgeeks.org/puzzle-20-5-pirates-and-100-gold-coins/
+
+		-> http://en.wikipedia.org/wiki/Pirate_game
+
+-> Heaven or Hell Puzzle
+	-> Puzzle:
+		-> There are two gates, one to heaven and other to hell. There are two gatekeepers, one for each gate. One of them always speaks the truth and other always lies but you don't know which one guards which gate. You are allowed only one question and you need to find out the gate to heaven.
+	-> Solution:
+		-> Ask any guard "What would the other guard say if I ask which was is to the hell"
+		-> And whatever answer he give is the way to heaven
+
+		-> If you end up asking the question to truthful one, he will speak the truth and he knows that other guard is going to lie so he will so the way to heaven
+		-> If you end up asking the question to the liear, he will lie about the other and the answer will be way to heaven
+		-> In Both cases you get ~T 
+
+	-> References:	
+		-> https://www.geeksforgeeks.org/puzzle-heaven-hell/				
+
+-> 100 Prisoners with Red/Black Hats Puzzle
+	-> Puzzle:
+		-> 100 prisoners in jail are standing in queue facing one direction. Each prisonae is wearing a hat of color either black or red. A prisoner can see hats of all prisoners standing in front of him in the queue, but cannot see his hat and hats of prisoners standing behind him
+		-> The jailer is going to ask color of each prisoner's hat starting from last prisoner in queue. If prisoner tells the correct color, then is saved, otherwise executed. How many prisoners can be saved at most if they are allowed to discuss a strategy before the jailer startes asking color of hats
+	-> Solution:	
+		-> At most 99 prisoners can be saved and 100th prisoner has 50-50 chances of being executed
+		-> The idea is that every prisoner counts the number of red hats in front of him. 
+		-> 100th prisoner says red if number of red hats is even. He may or may not be saved, but he conveys enough information to save 99th prisoner.
+
+		-> The 99th prisoner decides his answer based on answer of 100th prisoner. There are following possibilities
+			-> If 100th prisoner says Red i.e there are even number of hats in front of him
+				-> If 99th prisoner sees even number of red hats, then his color is black
+				-> If 99th prisoner sees odd number of red hats,
+				then his color is red
+			-> If 100th prisoner says Black i.e there are odd number of red hats in front of him
+				-> If 99th prisoner sees even number of red hats, then his color is red
+				-> If 99th prisoner sees odd number of red hats,
+				then his color is black
+		-> Similarly other prisoners from 98 to 1 can be saved
+
+	-> Reference:	
+		-> https://www.geeksforgeeks.org/puzzle-13-100-prisoners-with-redblack-hats/		
+
+-> Trapped in Phone Booth Puzzle
+	-> Puzzle:
+		-> You are trapped in a small phone booth shaped room. In the middle of each side of the room there is a hole. In each hole there is a push button that can be in either an on or off setting. You can't see in the holes but you can reach your hands in them and push the buttons. You can't tell by feel whether they are in the on or off position. You may stick your hands in any two holes at the same time and push neither, either or both of the buttons as you please. Nothing will happen until you remove both hands from the holes. You succeed if you get all the buttons into the same position, after which time you will immediately be released from room. Unless you escape, after removing your hands the room will spin around, disorienting you so you can't tell which side is which. How can you escape and what is the minimum number of turns after which you can guarantee that you will escape.
+	-> Solution:
+		-> 4 push buttons can be represented as 4 bit binary. End state to achieve is all 0s or all 1s i.e 0000 or 1111. So we can have 14 possible start states.
+
+		-> Below Steps should turn all possible 14 states to all 0s or all 1s
+			-> Push two opposite buttons
+			-> Push two adjacent buttons
+			-> Push two opposite buttons
+			-> Push one button
+			-> Push two opposite buttons
+			-> Push two adjacent buttons
+			-> Push two opposite buttons
+
+	-> Reference:
+		-> http://rec.puzzles.narkive.com/wZAQbX9p/button-trap-room
+
+
+-> Poisoned Wine, 1000 Bottles, 10 Prisoners
+	-> Puzzle:
+		->  The King of a small country invites 1000 senators to his annual party. As a tradition, each senator brings the King a bottle of a wine. Soon after, the Queen discovers that one of the senators is trying to assassinate the King by giving him a bottle of poisoned wine. Unfortunately, they do not know which senator, nor which bottle of wine is poisoned, and the poison is completely indiscernible. However, the King has 10 prisoners he plans to execute. He decides to use them as taste testers to determine which bottle of wine contains the poison. The poison when taken has no effect on the prisoner until exactly 24 hours later when the infected prisoner dies. The King needs to determine which bottle of wine is poisoned by tomorrow so that festivities can continue as planned. Hence he only has time for one round of testing. How can the King administer the wine to the prisoners to ensure that 24 hours from now he is guaranteed to have found the poisoned bottle of wine?
+	-> Solution:
+		-> As we have 10 prisoners and 1000 bottles. Using 10 bit binary where each bit represents a prisoner we can represent all 1000 bottles. 2^10 = 1024
+		-> We begin by labeling each bottle in 10 bit binary and its decimal equivalent. Also label each prisoner from 1 to 10.
+		-> Each bottle now serves as code describing which prisoners are to drink from it. In this system, one means the prisoner drinks from it, and a zero means the prisoner doesn't drink 
+		-> After 24 hours, line up the prisoners in order and note which ones have been poisoned with ones and mark the rest with zeros. Convert this number back to decimal and we now know the poisoned bottle of wine.
+
+	-> Reference:
+		-> https://medium.com/i-math/a-king-1000-bottles-of-wine-10-prisoners-and-a-drop-of-poison-2dd1959a8dd2
+
+-> Poisoned Wine, 240 Barrels, 5 Slaves
+	-> Puzzle:	
+		-> You have 240 barres of wine, one of which has been poisoned. After drinking the poisoned wine, one dies within 24 hours. You have 5 slaves whom you are willing to sacrifice in order to determine which barrel contains the poisoned wine. How do you achieve this in 48 hours?
+	-> Solution:
+		-> As we 5 slaves and 240 barrels of wine. Using 5 slaves we have to reprsent 240 barrels. This can be achieved if have 3 states 0, 1 and 2 so that 3^5 = 243. Here each digit corresponds to a slave. Lets say slave 1 corresponds to highest digit in 5 digit representation.
+		-> We begin by labelling barrels in 3 digit number system i.e (0, 1, 2) so that we can represent all barrels with 5 digits. And a slave corresponding to a digit.
+		-> In this system, one represents the prisoner drinks wine on 1st day, two represents that the prisoner drinks wine on 2nd day, zero represents that the prisoner doesn't drink 
+		-> After 48 hours, line up the slaves in order and note which one have been poisoned on day one and which ones are poisoned on day two, mark rest with zeros. Convert this number back to 3 digit number system and we now know the poisoned barrel of wine.
+		-> Example: barrel numbered 11201. The wine is taken on first day by slave numbered 1, 2 and 5 and on seconfd day by slave numbered 3.
+
+	-> Reference:
+		-> https://www.geeksforgeeks.org/puzzle-5-finding-the-poisoned-wine/
+

@@ -107,7 +107,7 @@ Puzzles
 	-> Reference:
 		-> https://www.geeksforgeeks.org/puzzle-5-finding-the-poisoned-wine/
 
--> 100 floors, 2 eggs Puzzle
+-> 100 Floors, 2 Eggs Puzzle
 	-> Puzzle:
 		-> Suppose that we wish to know which stories in a 100 story building are safe to drop eggs from, and which will cause the eggs to break on landing. What strategy should be used to drop eggs such that total number od drops in a worst case is minimized and we find the required floor
 	-> Assumptions:
@@ -140,7 +140,15 @@ Puzzles
 	-> Reference:
 		-> https://www.geeksforgeeks.org/puzzle-1-how-to-measure-45-minutes-using-two-identical-wires/
 		-> https://sbjoshi.wordpress.com/2008/06/04/puzzle-burning-ropes/
+
+-> 3 Ants and Triangle Puzzle
+	-> Puzzle:
+		-> There are 3 ants sitting on three corners of a triangle. All ants randomly pick a direction and start moving along edge of the triangle. What is the probability that any two ants collide ?
+	-> Solution:
+		-> Every ant has two choices. Thus the sample space involves 8 possibilities. Collision doesnot happen if all ants start walking clockwise or anticlockwise. Thus the probability of collision is 6/8
 		
+	-> Reference:
+		-> https://www.geeksforgeeks.org/puzzle-21-3-ants-and-triangle/
 
 
 

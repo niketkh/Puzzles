@@ -130,3 +130,17 @@ Puzzles
 
 	-> Reference:
 		-> https://www.geeksforgeeks.org/puzzle-set-35-2-eggs-and-100-floors/
+
+-> Measure 45 minutes using two identical wires Puzzle
+	-> Puzzle:
+		-> How do we measure forty five minutes using two identical wires, each of which takes an hour to burn. We have match sticks with us. The wires burn non uniformly. So for example the two halves of a wire might burn in 10 minutes and 50 minutes respectively.
+	-> Solution:
+		-> Light up three of the four ends of the two wires. Once one wire is completely burnt, light up the the fourth end. At 45 minutes both wires are burnt completely. 
+	
+	-> Reference:
+		-> https://www.geeksforgeeks.org/puzzle-1-how-to-measure-45-minutes-using-two-identical-wires/
+		-> https://sbjoshi.wordpress.com/2008/06/04/puzzle-burning-ropes/
+		
+
+
+

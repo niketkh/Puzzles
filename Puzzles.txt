@@ -205,4 +205,22 @@ Puzzles
 
 	-> Reference:
 		-> https://www.geeksforgeeks.org/puzzle-2-find-ages-of-daughters/
-		
+
+-> Calculate Total Distance Travelled by Bee Puzzle
+	-> Puzzle:
+		-> Two trains are on same track and they are coming toward each other. The speed of first train is 50 km/hr and speed of second train is 70 km/h. A bee starts flying between the trains when the distance between two trains is 100 kms.The bee first flies from first train to second train and so on until trains collide. Calculate teh total distance travelled by bee. Speed of bee is 40 km/hr
+
+	-> Solution:
+		-> Approach to solve this problem is to find time for collision. Once you know time for collision you should be able to calculate distance travelled by bee.
+		-> Time for collision for two objects at speed u and v respectively with distance d between them can be found out as
+			t = d1/u = d2/v
+			v * d1 - u * d2 = 0
+			d1 + d2 = d
+
+			t = d / (u + v)
+
+		-> t = 100 / (50 + 70) = 5 / 6
+			Distance travelled by bee = 40 * 5 / 6 = 33.333 kms
+
+	-> Reference:
+		-> https://www.geeksforgeeks.org/puzzle-3-calculate-total-distance-travelled-by-bee/

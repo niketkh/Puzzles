@@ -225,7 +225,7 @@ Puzzles
 	-> Reference:
 		-> https://www.geeksforgeeks.org/puzzle-3-calculate-total-distance-travelled-by-bee/
 
--> Pay an employee using 7 units of gold rod
+-> Pay an employee using 7 units of gold rod Puzzle
 	-> Puzzle:
 		-> An employee works for an employer for 7 days. The employer has a gold rod of 7 units. How does the employer pays to the employee so that the employee gets 1 unit at the end of each day. The employer can make at most 2 cuts in rod.
 
@@ -242,3 +242,15 @@ Puzzles
 
 	-> Reference: 
 		-> https://www.geeksforgeeks.org/puzzle-4-pay-an-employee-using-a-gold-rod-of-7-units/
+
+-> 3 Bulbs and 3 Switches Puzzle
+	-> Puzzle:
+		-> There is a room with a door closed and 3 light bulbs. Outside the room there are 3 switches connected to the bulbs.
+		You can manipulate the switches as you wish but once you open the door you can't change them. Identify switch for each bulb
+
+	-> Solution:
+		-> Turn on a switch for 15 to 20 mins lets say S1 and then turn off. Turn on switch S2 and keep S3 off.
+		-> Go inside the room the bulb that is hot corresponds to switch S1, bulb that is on corresponds to S2 and the bulb that is off corresponds to S3
+
+	-> Reference:
+		-> https://www.geeksforgeeks.org/puzzle-7-3-bulbs-and-3-switches/

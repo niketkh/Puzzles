@@ -250,7 +250,22 @@ Puzzles
 
 	-> Solution:
 		-> Turn on a switch for 15 to 20 mins lets say S1 and then turn off. Turn on switch S2 and keep S3 off.
-		-> Go inside the room the bulb that is hot corresponds to switch S1, bulb that is on corresponds to S2 and the bulb that is off corresponds to S3
+		-> Go inside the room the bulb that is off and hot corresponds to switch S1, bulb that is on corresponds to S2 and the bulb that is off corresponds to S3
 
 	-> Reference:
 		-> https://www.geeksforgeeks.org/puzzle-7-3-bulbs-and-3-switches/
+
+
+-> 100 Coins - 10 Heads, 90 Tails Puzzle
+	-> Puzzle:
+		-> 100 coins are laying flat on the table. 10 of them are heads up and 90 are tails up. You can't feel, see or in any other way find out which side is up. Split the coins into two piles such that there are same number of heads in each pile
+
+	-> Solution:
+		-> Create two piles of 90 and 10 coins each. As we have 10 heads one of the piles will have x coins with heads up and other have 10-x coins with heads up
+		-> Lets call the number of heads in pile of 90 as x. So now if we flip each coin in pile of 10 coins we get x heads as well
+		-> Thus, we now have equal number of heads in poth pile
+
+	-> Reference:
+		-> https://www.glassdoor.co.in/Interview/You-have-a-100-coins-laying-flat-on-a-table-each-with-a-head-side-and-a-tail-side-10-of-them-are-heads-up-90-are-tails-QTN_290837.htm
+
+		-> https://www.geeksforgeeks.org/puzzle-39-hundred-coin-puzzle/
